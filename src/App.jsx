@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './components/header';
-import Footer from './components/Footer';
+import Footer from './components/footer';
 
 // Import your actual HomePage component
 import HomePage from './pages/homepage';

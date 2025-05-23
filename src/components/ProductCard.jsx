@@ -1,6 +1,5 @@
 import React from 'react';
 import addtocartheart from '../assets/heart.svg'; // Adjust path as needed
-import fonts from '../fonts.css'; 
 function ProductCard({ product }) {
   const availableSizes = product.availableSizes || [];
 
