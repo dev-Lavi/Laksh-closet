@@ -1,112 +1,94 @@
-/* Header Layout */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: #fff;
-  border-bottom: 6px solid #d2d2d2;
-  position: relative;
-  min-height: 100px;
-  font-family: 'Karla', sans-serif;
+/* header.css */
+
+/* Ensure hamburger and cart spacing */
+.hamburger-container {
+  padding-left: 12px;
+  padding-right: 8px;
 }
 
-/* Section Layouts */
-.left-section,
-.right-section {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+.cart-container {
+  padding-right: 12px;
+  padding-left: 8px;
 }
 
-.left-section {
-  flex: 1;
-  text-transform: uppercase;
+header img {
+  display: block;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
-.center-section {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+/* Default: hide both search icons */
+.search-icon-mobile,
+.search-icon-desktop {
+  display: none;
 }
 
-.site-logo {
-  height: 80px;
+/* Mobile: show mobile search icon */
+@media (max-width: 1023px) {
+  .search-icon-mobile {
+    display: block;
+    width: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .search-icon-mobile:hover {
+    transform: scale(1.1);
+  }
 }
 
-/* Link Styling */
-.nav-link {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 1rem;
-  font-family: 'Karla', sans-serif;
+/* Desktop: show desktop search icon */
+@media (min-width: 1024px) {
+  .search-icon-desktop {
+    display: block;
+    width: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .search-icon-desktop:hover {
+    transform: scale(1.1);
+  }
 }
 
-.icon {
-  height: 24px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
+/* Sidebar Styling Improvements */
 
-.icon:hover {
-  transform: scale(1.1);
-}
-
-.hamburger {
-  height: 28px;
-}
-
-/* Sidebar Styles */
+/* Add spacing at the top of sidebar content */
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100vh;
-  background-color: #ffffff;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-  padding: 2rem 1.5rem;
-  transition: left 0.3s ease;
-  z-index: 1000;
+  margin-top: 40px;
 }
 
-.sidebar.open {
-  left: 0;
-}
-
+/* Improve spacing between sections */
 .sidebar h3 {
-  font-family: 'karla',sans serif;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .sidebar ul {
+  padding-left: 0;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  margin-bottom: 24px;
 }
 
-.sidebar li {
-  font-family: 'Karla', sans-serif;
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
-  cursor: pointer;
+.sidebar ul li {
+  padding: 6px 0;
   transition: color 0.2s;
 }
 
-.sidebar li:hover {
-  color: #444;
+/* Center the social icons */
+.sidebar-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
 }
 
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+/* Divider spacing */
+.sidebar hr {
+  margin: 24px 0;
+  border-color: #d1d5db; /* Tailwind's gray-300 */
 }
+
+/* Login/Register spacing */
+.sidebar .auth-links {
+  margin-bottom: 24px;
+}
+
